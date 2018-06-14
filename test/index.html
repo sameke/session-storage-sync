@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+
+    <title>test</title>
+</head>
+
+<body aurelia-app="app/main">
+
+    <a href="http://localhost:8080" target="_blank">new tab</a>
+    <button onclick="onAddSessionValue()">add session value</button>
+    <button onclick="onUpdateSessionValue()">update session values</button>
+    <button onclick="onDeleteSessionValue()">delete session value</button>
+    <button onclick="onClearSession()">clear session values</button>
+
+    <script type="text/javascript" src="jspm_packages/system.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript">
+        let storage = null;
+        let count = 0;
+        //(async () => {
+        System.import('./dist/Storage.js').then(function (stg) {
+            storage = new stg.Storage();
+        });
+        //})();
+
+        function onAddSessionValue() {
+            let target = 'test' + count;
+            storage.session.set(target, count);
+            count++;
+        }
+
+        function onUpdateSessionValue() {
+            let target = 'test' + (count - 1);
+            storage.session.set(target, 'updated');
+        }
+
+        function onDeleteSessionValue() {
+            let target = 'test' + (count - 1);
+            storage.session.remove(target);
+            count--;
+        }
+
+        function onClearSession() {
+            storage.session.clear();
+            count = 0;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "outDir": "dist",
+        "sourceMap": false,
+        "target": "es5",
+        "module": "amd",
+        "declaration": false,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "moduleResolution": "node",
+        "allowJs": true
+    },
+    "filesGlob": [
+        "./src/**/*.ts",
+        "./test/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test"
+    ],
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}
