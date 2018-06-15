@@ -28,5 +28,13 @@
   "devDependencies": {
     "express": "^4.16.3",
     "ncp": "^2.0.0"
+  },
+  "jspm": {
+    "registry": "npm",
+    "main": "index.js",
+    "format": "amd",
+    "directories": {
+      "dist": "dist"
+    }
   }
 }
