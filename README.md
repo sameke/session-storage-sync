@@ -1,4 +1,4 @@
-# browser-storage-sync
+# session-storage-sync
 Sync local and session storage across browser tabs from the same origin.  
 
 * ```Typescript``` friendly, no @types required
