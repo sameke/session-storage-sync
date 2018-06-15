@@ -1,5 +1,15 @@
-define(["require", "exports", "./Storage"], function (require, exports, Storage_1) {
+System.register(["./Storage"], function (exports_1, context_1) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.Storage = Storage_1.Storage;
+    var __moduleName = context_1 && context_1.id;
+    return {
+        setters: [
+            function (Storage_1_1) {
+                exports_1({
+                    "Storage": Storage_1_1["Storage"]
+                });
+            }
+        ],
+        execute: function () {
+        }
+    };
 });

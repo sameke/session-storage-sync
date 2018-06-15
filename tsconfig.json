@@ -5,12 +5,12 @@
         "outDir": "dist",
         "sourceMap": false,
         "target": "es5",
-        "module": "amd",
+        "module": "system",
         "declaration": false,
         "noImplicitAny": true,
         "removeComments": true,
         "moduleResolution": "node",
-        "allowJs": true
+        "allowJs": false
     },
     "filesGlob": [
         "./src/**/*.ts",
