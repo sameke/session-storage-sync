@@ -1,6 +1,6 @@
 {
   "name": "session-storage-sync",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "sync session storage across multiple browser tabs from same origin",
   "main": "dist/index.js",
   "scripts": {
@@ -28,11 +28,5 @@
   "devDependencies": {
     "express": "^4.16.3",
     "ncp": "^2.0.0"
-  },
-  "jspm": {
-    "directories": {
-      "baseURL": "test"
-    },
-    "devDependencies": {}
   }
 }

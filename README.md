@@ -2,7 +2,7 @@
 Sync local and session storage across browser tabs from the same origin.  
 
 * ```Typescript``` friendly, no @types required
-* built for ```SystemJS``` module loader
+* built for ```amd``` module loader
 
 **BUILDING**
 
