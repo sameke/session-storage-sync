@@ -1,40 +1,37 @@
 {
-  "name": "session-storage-sync",
-  "version": "0.6.0",
-  "description": "sync session storage across multiple browser tabs from same origin",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sameke/session-storage-sync.git"
-  },
-  "keywords": [
-    "browser-storage",
-    "storage-sync",
-    "local-storage",
-    "session-storage",
-    "storage",
-    "tab-sync"
-  ],
-  "author": "weagle08",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sameke/session-storage-sync/issues"
-  },
-  "homepage": "https://github.com/sameke/session-storage-sync#readme",
-  "devDependencies": {
-    "express": "^4.16.3",
-    "ncp": "^2.0.0"
-  },
-  "jspm": {
-    "registry": "npm",
-    "main": "index.js",
-    "format": "amd",
-    "directories": {
-      "dist": "dist"
+    "name": "session-storage-sync",
+    "version": "0.6.0",
+    "description": "sync session storage across multiple browser tabs from same origin",
+    "main": "dist/index.js",
+    "files": [
+        "./dist/**/*"
+    ],
+    "scripts": {
+        "build": "tsc -p tsconfig.json",
+        "prepublishOnly": "npm run build && npm run git && npm version patch",
+        "postpublish": "git push",
+        "git": "git add . && git diff-index --quiet HEAD || git commit -m \"Publishing\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sameke/session-storage-sync.git"
+    },
+    "keywords": [
+        "browser-storage",
+        "storage-sync",
+        "local-storage",
+        "session-storage",
+        "storage",
+        "tab-sync"
+    ],
+    "author": "weagle08",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sameke/session-storage-sync/issues"
+    },
+    "homepage": "https://github.com/sameke/session-storage-sync#readme",
+    "dependencies": {
+        "uuid": "11.0.5"
     }
-  }
 }

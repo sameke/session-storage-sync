@@ -1,4 +1,4 @@
-import { StorageMechanism } from "./StorageMechanism";
+import { StorageMechanism } from "./storage-mechanism";
 
 export class SessionStorage extends StorageMechanism {
     private _events: {

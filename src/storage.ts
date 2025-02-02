@@ -1,6 +1,5 @@
-import { StorageMechanism } from './StorageMechanism';
-// @ts-ignore
-import * as uuid from './uuid';
+import { StorageMechanism } from './storage-mechanism';
+import { v4 as uuid } from 'uuid';
 import {
     SESSION_STORAGE_ID,
     WINDOW_STORAGE_EVENT,
@@ -10,8 +9,8 @@ import {
     ADD_TO_SESSION_STORAGE_KEY,
     CLEAR_SESSION_STORAGE_KEY
 } from './constants';
-import { LocalStorage } from './LocalStorage';
-import { SessionStorage } from './SessionStorage';
+import { LocalStorage } from './local-storage';
+import { SessionStorage } from './session-storage';
 
 export class Storage {
     private _local: LocalStorage;
