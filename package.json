@@ -1,6 +1,6 @@
 {
     "name": "session-storage-sync",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "description": "sync session storage across multiple browser tabs from same origin.",
     "main": "dist/index.js",
     "files": [
